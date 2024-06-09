@@ -1,0 +1,121 @@
+{
+  // Place your conbipel-ecomm workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "Create a sfcc logger": {
+    "scope": "javascript",
+    "prefix": "log",
+    "body": ["const log = require('*/cartridge/scripts/util/logutils').getLogger('$TM_FILENAME_BASE');"],
+    "description": "Creates a logger"
+  },
+  "logutils": {
+    "scope": "javascript",
+    "prefix": "logutils",
+    "body": ["const logutils = require('*/cartridge/scripts/util/logutils');"],
+    "description": "require logutils"
+  },
+  "stopwatch": {
+    "scope": "javascript",
+    "prefix": "stopwatch",
+    "body": ["let stopwatch = new (require('*/cartridge/scripts/util/stopwatch'))();"],
+    "description": "creates a stopwatch"
+  },
+  "objectUtils": {
+    "scope": "javascript",
+    "prefix": "objectUtils",
+    "body": ["const objectUtils = require('*/cartridge/scripts/util/objectUtils');"],
+    "description": "require objectUtils"
+  },
+  "langutils": {
+    "scope": "javascript",
+    "prefix": "langutils",
+    "body": ["const langutils = require('*/cartridge/scripts/util/langutils');"],
+    "description": "require langutils"
+  },
+  "entitytojson": {
+    "scope": "javascript,typescript",
+    "prefix": "entitytojson",
+    "body": ["require('*/cartridge/scripts/util/objectUtils').entityToJson(${1:var})"],
+    "description": "entitytojson"
+  },
+  "site": {
+    "scope": "javascript",
+    "prefix": "site",
+    "body": ["const Site = require('dw/system/Site');"],
+    "description": "require site"
+  },
+  "collections": {
+    "scope": "javascript,typescript",
+    "prefix": "collections",
+    "body": ["var collections = require('*/cartridge/scripts/util/collections');"],
+    "description": "entitytojson"
+  },
+  "elx.develop()": {
+    "scope": "isml",
+    "prefix": "develop",
+    "body": ["${elx.develop()}"]
+  },
+  "isml.msg": {
+    "scope": "isml",
+    "prefix": "msg",
+    "body": ["${elx.msg('${1:key}', 'translations', null)}"]
+  },
+  "elx declaration": {
+    "scope": "isml",
+    "prefix": "elx declaration",
+    "body": ["<isscript>var elx = require('*/cartridge/scripts/util/elx.js');</isscript>"]
+  },
+  "error log": {
+    "scope": "javascript,typescript",
+    "prefix": "error log",
+    "body": "log.error('Error: ' + e.message + '\\n' + e.stack);"
+  },
+  "modules": {
+    "scope": "isml",
+    "prefix": "tags modules",
+    "body": "<isinclude template=\"_tags/modules\" />"
+  },
+  "For Loop with let": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+      "\tlet ${3:element} = ${2:array}[${1:index}];",
+      "\t$0",
+      "}"
+    ],
+    "description": "For Loop"
+  },
+  "component": {
+    "scope": "javascript,typescript",
+    "prefix": "component",
+    "body": [
+      "import ${1:BaseComponent} from '../abstracts/${1:BaseComponent}';",
+      "",
+      "export default class ${2:ComponentName} extends ${1:BaseComponent} {",
+      "  constructor(element) {",
+      "    super(element);",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "emit message": {
+    "scope": "javascript,typescript",
+    "prefix": "emit message",
+    "body": "this.EMIT(this.CUSTOM_MESSAGES.${1:ComponentEvents}.${2:messageName})"
+  }
+}

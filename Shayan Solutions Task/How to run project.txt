@@ -1,0 +1,3 @@
+start react server (first install all dependencies: run command:  npm install then: npm run start)
+start node server (first install all dependencies: run command:  npm install then: npm run start)
+database is connected online mongodb Atlas:

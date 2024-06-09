@@ -1,0 +1,74 @@
+{
+  // EDITOR
+  "editor.formatOnSave": false, // conflicts with eslint formatting - see https://github.com/prettier/prettier-vscode/issues/315
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.snippetSuggestions": "bottom",
+  // ESLINT
+  // "eslint.format.enable": true,
+  // "eslint.lintTask.enable": true,
+  // "eslint.options": {
+  //   "configFile": ".eslintrc.js",
+  //   "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  // },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  // JS FORMATTER
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // XML FORMATTER
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.tabSize" :4
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  // HTML FORMATTER
+  "html.format.wrapLineLength": 500,
+  "html.format.wrapAttributes": "preserve",
+  // CSS/SCSS FORMATTER
+  // "css.lint.duplicateProperties": "error",
+  // "css.lint.emptyRules": "error",
+  // "css.lint.float": "error",
+  // "css.lint.important": "warning",
+  // "css.lint.universalSelector": "warning",
+  // "css.lint.zeroUnits": "error",
+  "scss.lint.duplicateProperties": "error",
+  "scss.lint.emptyRules": "error",
+  "scss.lint.float": "error",
+  "scss.lint.important": "warning",
+  "scss.lint.universalSelector": "warning",
+  "scss.lint.zeroUnits": "error",
+  "scss.lint.unknownAtRules": "ignore",
+  "[isml]": {
+    "editor.defaultFormatter": "SqrTT.prophet",
+    "editor.formatOnSave": true
+  },
+  "extension.prophet.sandbox.filesystem.enabled": false,
+  "extension.prophet.script.server.disable.diagnostics": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "isml": "html"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000",
+    "activityBar.foreground": "#fff",
+    "activityBar.inactiveForeground": "#fff"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

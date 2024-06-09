@@ -1,0 +1,17 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "SqrTT.prophet",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-xml",
+    // "stylelint.vscode-stylelint",
+    "mrmlnc.vscode-scss",
+    "simonsiefke.svg-preview",
+    "pikamachu.require-cartridge-resolve",
+    "fabiospampinato.vscode-open-in-finder",
+    "knisterpeter.vscode-commitizen"
+  ]
+}
